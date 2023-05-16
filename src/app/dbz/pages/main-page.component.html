@@ -1,0 +1,19 @@
+<h1>DBZ Main Page</h1>
+<hr>
+
+<!-- si no aparece esto, aparece el valor por defecto del INPUT (TRUNKS)
+[characterList]="characters" -->
+
+<!-- (deleteCharacter)="dbzService.onDeleteCharacter($event)" -->
+<div class="row">
+  <div class="col">
+    <dbz-list
+      [characterList]="characters"
+      (deleteCharacterById)="onDeleteCharacter($event)">
+    </dbz-list>
+  </div>
+</div>
+
+<div class="col">
+  <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+</div>
